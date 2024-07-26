@@ -1,0 +1,387 @@
+ /* start global rules */
+* {
+-webkit-box-sizing:border-box ;
+-moz-box-sizing: border-box;
+box-sizing:border-box;
+}
+body {
+font-family: 'Work Sans', sans-serif;
+}
+html{
+   scroll-behavior: smooth;
+}
+:root{
+  --main-color:#10cab7; 
+  --section-padding:60px;
+}
+.cointaner{
+     margin-left: auto;
+    margin-right: auto;
+    padding-left:15px ;
+    padding-right: 15px;    
+}
+.special-heading{
+   text-align: center;
+   color: #ebeced;
+   font-size: 100px;
+   margin: 0;
+   letter-spacing:-3px;
+}
+/* small */
+@media(min-width:768px) {
+.cointaner{
+    width: 750px;
+}
+}
+/* medium */
+@media(min-width:992px) {
+    .cointaner{
+        width:970px;
+    }
+    }
+    /* large */
+@media(min-width:1200px) {
+    .cointaner{
+        width: 1170px;
+    }
+    
+    }
+ /* end global rules */
+
+ /* start header */
+ .header{
+    padding: 20px;
+ }
+ 
+.header .logo{
+    width: 60px ;
+}
+
+.header .cointaner {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.header .links{
+   position: relative;
+ }
+.header .links:hover .icon span:nth-child(2){
+width: 100%;
+
+}
+ .header .links .icon{
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+ }
+ .header .links .icon span{
+    background-color: black;
+    height:2px;
+    margin-bottom: 5px;
+    
+ }
+ .header .links .icon span:first-child{
+    width: 100%;
+ }
+ .header .links .icon span:nth-child(2){
+    width: 60%;
+    transition: .3s ease;
+    
+ }
+ .header .links .icon span:last-child{
+    width:100%;
+ }
+
+.header .links ul{
+   min-width: 200px;
+   background-color:#f6f6f6;
+   position:absolute;
+   right:0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: none;
+    z-index: 1;
+    
+ }
+
+ .header .links ul a{
+   display:block;
+padding: 15px;
+text-decoration: none;
+transition:.3s ease;
+color: #333;
+ }
+
+ .header .links ul a:hover{
+padding-left: 25px;
+
+ }
+li{
+   border-bottom: 1px solid #ddd ;
+}
+ .none{                               /*  the last li */
+   border: none;
+}
+
+.header .links:hover ul{
+   display: block;
+ }
+
+.landing{
+   background-image: url(../images/beautiful-autumn-leaves-autumn-red-background-sunny-daylight-horizontal-toning.jpg);
+   background-size: cover;
+   height: calc(100vh - 64px);
+}
+.landing .landing-text{
+ position: absolute;
+ left: 30%;
+ top: 50%;
+ transform: translate(-50%,-50%);
+ text-align: center;
+ width: 300px;
+ max-width: 100%;
+
+}
+.landing .landing-text h1{
+   margin: 0;
+   font-weight: bold;
+   font-size: 50px;
+   color: var(--main-color);
+}
+.landing .landing-text p{
+   font-size: 19px;
+   line-height: 1.8;
+   font-weight: bold;
+}
+
+/* End header */
+
+/* star feature  */
+
+.features{
+   padding-top:60px ;
+   padding-bottom: 60px;
+   background-color: #f6f6f6;
+}
+
+
+.features .cointaner{
+display:flex;
+justify-content: center;
+align-items: center;
+}
+
+.features .cointaner .feat{
+   text-align: center;
+width: 500px;
+padding: 13px;
+transition: .6s ease;
+}
+.features .cointaner .feat:hover{
+transform: scale(1.1,1.1);
+ 
+
+}
+.features .cointaner i{
+   color:var(--main-color) ;
+}
+
+
+.cointaner .feat h3 {
+font-weight: 800px;
+}
+.cointaner .feat p{
+line-height: 1.8;
+color: #777;
+font-size: 17px;
+}
+/* End feature */
+/* ********************************************** */
+/* start services */
+.special-heading + p {
+margin:-30px;
+color: #797979;
+text-align: center;
+}
+
+ .services {
+   padding-bottom: 60px;
+   padding-top:60px;
+ }
+ .services .sercices-content {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+grid-gap: 30px;
+margin-top: 100px;
+
+ }
+
+ .services .sercices-content .srv{
+   display: flex;
+   margin-bottom: 30px;
+}
+
+.services .sercices-content .srv i{
+   color: var(--main-color);
+   flex-basis:60px;
+}
+.services .sercices-content .srv .text{
+
+   flex: 1;
+}
+.services .sercices-content .srv .text h3{
+
+   margin:0;
+}
+
+.services .sercices-content .srv .text p{
+   color: #444;
+}
+/* End services */
+
+/*srart portfolio */
+.portfolio{
+   padding-top:var(--section-padding);
+   padding-bottom: var(--section-padding);
+   background-color: #f6f6f6;
+}
+.portfolio .portfolio-content{
+   display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+grid-gap: 30px;
+margin-top: 100px;
+}
+.portfolio .portfolio-content .card{
+   background-color: white;
+ transition: .5s ease;
+ 
+ }
+.portfolio .portfolio-content .card:hover{
+transform: scale(1.1,1.1);
+
+}
+.portfolio .portfolio-content .info{
+   padding: 20px;
+}
+
+.portfolio .portfolio-content .card img{
+max-width: 100%;  
+}
+.portfolio .portfolio-content .info h3 {
+margin: 0;
+
+}
+.portfolio .portfolio-content .info p{
+color: #777;
+line-height: 1.6;
+
+}
+/* end portfolio */
+
+
+/* start about */
+.about {
+   padding-bottom: 60px;
+   padding-top:60px;
+
+}
+
+.about .about-content {
+margin-top:100px;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+
+
+}
+
+.about-content .image{
+   width: 250px;
+   height:375px;
+   position: relative;
+}
+.about-content .image img{
+   max-width: 100%;
+
+}
+
+ .about-content .text{
+    flex-basis: calc(100% - 500px);
+}
+
+.about-content .text p:first-of-type {
+font-weight: bold;
+margin-bottom: 50px;
+}
+.about-content .text hr{
+width: 50%;
+display: inline-block;
+border-color: var(--main-color);
+}
+
+.about-content .text p:last-of-type{
+   color: #777;
+   line-height: 2;
+
+}
+
+/* End about */
+
+
+/* start contact */
+.contact {
+   padding-bottom: 60px;
+   padding-top:60px;
+   background-color: #f6f6f6;
+
+}
+
+.contact .info{
+   padding-bottom: 60px;
+   padding-top:60px;
+   text-align: center;
+} 
+.contact .info .label{
+      font-size: 30px;
+      font-weight: 800px;
+      color: #2c4755;
+}
+.contact .info .link{
+display: block;
+font-size: 30px;
+font-weight: 800px;
+color: var(--main-color);
+text-decoration: none;
+}
+.contact .info .social{
+   display: flex;
+   justify-content: center ;
+   /* padding-top: 10px; */
+
+}
+.contact .info  .social i {
+   margin-left: 10px;
+}
+
+
+/* End contact */
+
+
+/* start footer */
+.footer{
+   background-color:#2c4755 ;
+color: right;
+text-align: center;
+padding:30px 10px  ;
+font-size: 18px;
+
+}
+.footer span{
+   color: var(--main-color);
+   font-weight: bold;
+}
+
+
+/* end footer */
